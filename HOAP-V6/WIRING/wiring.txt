@@ -1,0 +1,32 @@
+# Hardware Wiring Guide (HOAP v6.0)
+
+### ⚠️ IMPORTANT: VOLTAGE WARNING
+The **MFRC522 (RFID Reader)** MUST be connected to **3.3V**. Connecting it to 5V will permanently damage the sensor. The LCD and Servo run on **5V**.
+
+### 📌 Pin Mapping Table
+
+| Component | Arduino Pin | Component Pin | Notes |
+| :--- | :--- | :--- | :--- |
+| **RFID (MFRC522)** | 10 | SDA (SS) | SPI Data |
+| | 13 | SCK | SPI Clock |
+| | 11 | MOSI | SPI Out |
+| | 12 | MISO | SPI In |
+| | 9 | RST | Reset |
+| | **3.3V** | VCC | **POWER SOURCE** |
+| | GND | GND | Ground |
+| **I2C LCD** | A4 | SDA | Data |
+| | A5 | SCL | Clock |
+| | 5V | VCC | Power |
+| | GND | GND | Ground |
+| **Servo (MG90S)** | 6 | PWM | Signal (Orange) |
+| | 5V | VCC | Power (Red) |
+| | GND | GND | Ground (Brown) |
+| **Buzzer** | 8 | Signal | Positive (+) |
+| | GND | GND | Negative (-) |
+
+## 🛠️ Components Used
+- Arduino Uno R3
+- MFRC522 RFID Module
+- 16x2 LCD with I2C Backpack
+- MG90S Micro Servo
+- Active or Passive Piezo Buzzer
